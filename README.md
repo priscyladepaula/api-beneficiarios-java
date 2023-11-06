@@ -39,24 +39,23 @@ Para executar, no mesmo lado, ir para <i>Java Projects</i> > clicar no botão di
 ```json
 
 {
-  "id": 1,
-  "nome": "string",
-  "telefone": "string",
-  "dataNascimento": "2023-11-05",
+  "nome": "Priscyla",
+  "telefone": 11912345678,
+  "dataNascimento": "1900-11-06",
   "documentos": [
     {
       "id": 1,
-      "tipoDocumento": "string",
-      "descricao": "string"
+      "tipoDocumento": "Teste",
+      "descricao": "Teste"
     },
     {
       "id": 2,
-      "tipoDocumento": "string",
-      "descricao": "string"
+      "tipoDocumento": "Teste",
+      "descricao": "Teste"
     }
   ]
 }
 
 ```
 <br> No caso do Swagger, não é necessário manter o id do beneficiário, pois já é solicitado na própria interface, portanto é preciso manter somente o(s) id(s) do(s) documento(s):
-![Swagger](image-3.png)
+![Alt text](image-4.png)
