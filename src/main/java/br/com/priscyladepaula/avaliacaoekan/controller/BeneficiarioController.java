@@ -49,7 +49,7 @@ public class BeneficiarioController {
     }
 
     @GetMapping("/{id}/documentos")
-    public ResponseEntity<Set<Documento>> listAllDocumentos(@PathVariable Integer id){
+    public ResponseEntity<Set<Documento>> listAllDocumentos(@PathVariable Long id){
         Beneficiario beneficiario = this.beneficiarioRepository.findById(id).orElse(null);
 
         if(beneficiario == null){
@@ -61,7 +61,7 @@ public class BeneficiarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@RequestBody Beneficiario beneficiario, @PathVariable Integer id) {
+    public ResponseEntity<String> update(@RequestBody Beneficiario beneficiario, @PathVariable Long id) {
         Beneficiario _beneficiario = this.beneficiarioRepository.findById(id).orElse(null);
 
         if (_beneficiario != null) {
@@ -81,7 +81,7 @@ public class BeneficiarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteById(@PathVariable Integer id) {
+    public ResponseEntity<String> deleteById(@PathVariable Long id) {
         var _beneficiario = this.beneficiarioRepository.findById(id).orElse(null);
 
         if (_beneficiario == null) {

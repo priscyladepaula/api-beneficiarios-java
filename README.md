@@ -21,12 +21,16 @@ git clone https://github.com/priscyladepaula/api-beneficiarios-java.git
 Para executar, no mesmo lado, ir para <i>Java Projects</i> > clicar no botão direito > <i>Run</i>:
 ![Alt text](image-2.png)
 <br>
+### Via Render com Swagger
+- Projeto configurado com Dockerfile realizado um deploy online, sem precisar clonar o projeto e realizar a execução do projeto via local:<br>
+https://api-beneficiarios.onrender.com/swagger-ui/index.html
+
 ### Via Local com Swagger
 - Após executar o projeto, abrir o http://localhost:8080/swagger-ui/index.html, que aparecerá na própria interface todos os métodos para construção dos JSONs.
 ![Swagger](image.png)
 
 ### Via Local:
-- Utilizar qualquer ferramenta que faça requisições HTTP (Postman, Inmsomnia, APIDog), e criar as requisições usando o http://localhost:8080/
+- Utilizar qualquer ferramenta que faça requisições HTTP (Postman, Inmsomnia, APIDog, etc), e criar as requisições usando o http://localhost:8080/
 
 ### Requisições
 - <b>POST:</b> url/beneficiario/: realizará o cadastro do beneficiário, juntamente com seus documentos. O documento pode ser mais de um. A funcionalidade dele foi utilizado <b>OneToMany</b>, para cenário de 1 para muitos, como apresentado no diagrama da proposta da empresa;
