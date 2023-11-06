@@ -43,17 +43,23 @@ public class BeneficiarioController {
     }
 
     @GetMapping("/all/")
-    public ResponseEntity<List<BeneficiarioDTO>> listAll() {
-        List<BeneficiarioDTO> beneficiarios = this.beneficiarioService.getAllBeneficiarios();
-        return new ResponseEntity<>(beneficiarios, HttpStatus.OK);
+    public ResponseEntity<?> listAll() {
+        var beneficiarios = this.beneficiarioService.getAllBeneficiarios();
+
+        if(beneficiarios.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("Nenhum beneficiário cadastrado!");
+        }
+        return new ResponseEntity<List<BeneficiarioDTO>>(beneficiarios, HttpStatus.OK);
     }
 
     @GetMapping("/{id}/documentos")
-    public ResponseEntity<Set<Documento>> listAllDocumentos(@PathVariable Long id){
+    public ResponseEntity<?> listAllDocumentos(@PathVariable Long id){
         Beneficiario beneficiario = this.beneficiarioRepository.findById(id).orElse(null);
 
         if(beneficiario == null){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("Nenhum documento do beneficiário encontrado!");
         }
 
         Set<Documento> documentos = beneficiario.getDocumentos();
