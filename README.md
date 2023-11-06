@@ -2,7 +2,7 @@
 Projeto de envio para avaliação da empresa Ekan, a proposta é criar uma aplicação para manter cadastro de beneficiários de um plano de saúde.
 
 ### 💻 Tecnologias e Software utilizadas
-![](https://img.shields.io/static/v1?label=Java&message=JDK21&labelColor=white&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=Java&message=JDK17&labelColor=white&style=for-the-badge)
 ![](https://img.shields.io/static/v1?label=Database&message=h2&labelColor=white&style=for-the-badge)
 
 
