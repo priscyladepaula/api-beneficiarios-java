@@ -21,6 +21,7 @@ git clone https://github.com/priscyladepaula/api-beneficiarios-java.git
 Para executar, no mesmo lado, ir para <i>Java Projects</i> > clicar no botão direito > <i>Run</i>:
 ![Alt text](image-2.png)
 <br>
+
 ### Via Render com Swagger
 - Projeto configurado com Dockerfile realizado um deploy online, sem precisar clonar o projeto e realizar a execução do projeto via local:<br>
 https://api-beneficiarios.onrender.com/swagger-ui/index.html
